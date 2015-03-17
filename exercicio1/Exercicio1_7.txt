@@ -1,0 +1,7 @@
+Variavel3 = 7
+Variavel4 = 10.5
+Porque quando se fez a divisão, colocou-se (float) antes de variavel1
+Variavel5 = 10
+Porque quando se fez a divisão, não colocou-se (float) antes de variavel1
+Variavel4 é maior que a 10.0
+Variavel5 é menor que a 10.0
