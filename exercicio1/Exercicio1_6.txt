@@ -1,0 +1,20 @@
+Exercicio1_3:
+o valor da soma foi: 68
+o vamor da multiplicação foi: 2700
+o valor da divisao foi: 75
+o valor da subtração foi: 22
+
+Exercicio1_4:
+o valor da soma foi: 68.0
+o vamor da multiplicação foi: 2700.0
+o valor da divisao foi: 0.75
+o valor da subtração foi: 22.0
+
+Exercicio1_5:
+o valor da soma foi: 68.0
+o vamor da multiplicação foi: 2700.0
+o valor da divisao foi: 0.75
+o valor da subtração foi: 22.0
+
+As diferenças estão nos exercícios 3 para 4 e 3 para 5. Onde no exercício 3 a respostas foram números inteiros, portanto não contém números com virgula. 
+O que está presente no 4 e 5.
