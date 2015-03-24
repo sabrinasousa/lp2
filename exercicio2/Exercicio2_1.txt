@@ -1,0 +1,14 @@
+Tipo Abstrato de Dados: 
+  Um tipo abstrato de dados (TAD) pode ser visto como um modelo matemático que encapsula um modelo de dados e 
+um conjunto de procedimentos que atuam com exclusividade sobre os dados encapsulados.
+
+Classe:
+  É um tipo abstrato de dados, apresentando conceito estático.
+  
+Objeto:
+  É a instância de uma classe, ou seja, a materialização de uma classe, que apresenta conceito dinâmico.
+  
+Mensagens:
+    Uma mensagem é um pequeno texto que os objetos conseguem entender e, por questões técnicas, não pode conter espaços. 
+  Junto com algumas dessas mensagens ainda é possível passar algumas informações para o objeto (parâmetros), 
+  dessa forma, dois objetos conseguem trocar informações entre si facilmente.
