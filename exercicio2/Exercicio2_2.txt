@@ -1,0 +1,1 @@
+A palavra-chave new é usada para instânciar um objeto 
