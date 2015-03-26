@@ -1,1 +1,5 @@
-A palavra-chave new é usada para instânciar um objeto 
+  A palavra-chave new é usada para instânciar um objeto. New trata de reservar memória o suficiente para o objeto e criar 
+automaticamente uma referência a ele. Para new conseguir determinar o objeto, precisamos usar o método construtor que será 
+usado como base para instanciar a classe e gerar o objeto.
+  Tecnicamente, declaramos uma variável qualquer como sendo do tipo da classe (ex.: TV minhaTV; ), depois instanciamos o 
+objeto atribuindo a variável o resultado obtido por new mais o método construtor (ex.: minhaTV = new TV(); ).
