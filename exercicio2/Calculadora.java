@@ -1,65 +1,135 @@
-public class Calculadora{
+package cpf;
 
-	int var1, var2, soma, subtracao, multiplicacao;
-        float divisao;
+import java.util.Scanner;
+
+public class Cpf {
+    int n = 11;
+        String pconvert;
+        int numero[] = new int[n];
+        int resultado[] = new int[n];
+        int peso[] = new int[n];
+        int i, soma=0;
+        int j = 2; 
+        int x;
+        int verificador ; 
+        int y; 
+       
         
-	
-	public void soma(){
-	soma = (var1 + var2);
-	System.out.println("A soma é: " + this.soma);
-	
-	}
-	
-	public void subtracao(){
-	subtracao = (var1 - var2);
-	System.out.println("A subtração é: " + this.subtracao);
-	
-	}
-	
-	public void multiplicacao(){
-	multiplicacao = (var1 * var2);	
-	System.out.println("A multiplicação é: " + this.multiplicacao);
-	
-	}
-	
-	public void divisao(){
-	divisao = (var1 / var2);	
-	System.out.println("A divisão é: " + this.divisao);
-	
-	}
-	
-	public static void main (String [] args){
-	
-	Calculadora ct1 = new Calculadora();
-	Calculadora ct2 = new Calculadora();
-	Calculadora ct3 = new Calculadora();
+    public void AchaX(){
+        
+        
+        //inserindo os valor na String
+        Scanner valor = new Scanner(System.in);
+        System.out.println("Digite os primeiros 9 digitos do seu cpf: ");
+        pconvert = valor.next();
 
-
-	ct1.var1 = 6;
-	ct1.var2 = 45;
-	
-        ct1.soma();
-	ct1.subtracao();
-	ct1.multiplicacao();
-	ct1.divisao();
-
-	ct2.var1 = 33;
-	ct2.var2 = 76;
-	
-        ct2.soma();
-	ct2.subtracao();
-	ct2.multiplicacao();
-	ct2.divisao();
-
-	ct3.var1 = 12;
-	ct3.var2 = 21;
-	
-        ct3.soma();
-	ct3.subtracao();
-	ct3.multiplicacao();
-	ct3.divisao();
-
-
-	}
+        //valor cpf
+        //Converter o valor da String para um vetor
+        for (i=8; i>=0; i--) {
+            //Aqui você pega os valores da string, dividi ela em chars, e transforma cada "letra" em um valor numerico que será jogada no vetor v[] que é um inteiro
+            numero[i] = Character.getNumericValue(pconvert.charAt(i));
+            System.out.println("Vetor: " + numero[i]);
+        }
+            
+        
+        //valor n de 2 a 10
+            for (i=8; i>=0; i--){
+                peso[i] = j;
+                j++;
+                System.out.println("Vetor n: " + peso[i]); 
+            }
+        
+        //multiplicação ente os vetores
+            for (i=8; i>=0; i--){
+                resultado[i] = numero[i] * peso[i];
+                System.out.println("Resultado da multiplicação " + resultado[i]); 
+            }
+       
+        //soma do vetor resultado
+            for (i=0 ; i<=8; i++){
+                soma+=resultado[i];   
+            }
+        System.out.println("Resultado da soma " + soma); 
+        
+        //verificando x
+        verificador = soma%11;
+        System.out.println("verificador = " + verificador);
+        
+        if (verificador<2){
+            x=0;
+            System.out.println("x = " + x);
+            numero[9]= x; 
+            
+            for (i=9; i>=0; i--) {
+            System.out.println("Vetor: " + numero[i]);
+        }
+            
+             
+        
+        }
+        else {
+            x= 11-10;
+            System.out.println("x = " + x);
+            numero[9]= x;  
+            
+             for (i=9; i>=0; i--) {
+            System.out.println("Vetor: " + numero[i]);
+        }
+                   
+        }
+     
+    }    
+    
+    /*public void AchaY( ){
+        
+         
+        
+        //valor n de 2 a 11
+            for (i=9; i>=0; i--){
+                peso[i] = j;
+                j++;
+                System.out.println("Vetor n: " + peso[i]); 
+            }
+        
+        //multiplicação ente os vetores
+            for (i=9; i>=0; i--){
+                resultado[i] = numero[i] * peso[i];
+                System.out.println("Resultado da multiplicação " + resultado[i]); 
+            }
+       
+        //soma do vetor resultado
+            for (i=0 ; i<=9; i++){
+                soma+=resultado[i];   
+            }
+        System.out.println("Resultado da soma " + soma); 
+        
+        //verificando x
+        verificador = soma%11;
+        System.out.println("verificador = " + verificador);
+        
+        if (verificador<2){
+            y=0;
+            System.out.println("y = " + y);
+        }
+        else {
+            y= 11-10;
+            System.out.println("y = " + y);
+        }
+        
+        
+        
+    }
+  
+    */
+    
+    public static void main(String[] args) {
+        
+        Cpf dex = new Cpf();
+        dex.AchaX();
+        
+        //Cpf dey = new Cpf();
+        //dey.AchaY();
+        
+    }
 
 }
